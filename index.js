@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 var description,dob,character,slang
 
-const token = "NzMxNDQ3MTc5MzA2MjA1MTk0.XwnVDQ.NZZSs3efLmsle0nT-CtwwRDcRLU";
+const token = //token;
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
