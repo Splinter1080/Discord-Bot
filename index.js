@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 var description,dob,character,slang
 
-const token = //token;
+const token = process.env.key
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
@@ -137,8 +137,7 @@ const PREFIX = '-';
           slang='maams/bhaisaahab'
         break;
 
-default:
-  return;
+
  
 
 
