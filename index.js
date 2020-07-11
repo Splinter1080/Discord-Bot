@@ -148,9 +148,8 @@ const PREFIX = '-';
 
 
         }
-        const user = getUserFromMention(args[1]);
-        //console.log(user);
-        var name = user.username;
+        
+      
         var dp = user.displayAvatarURL()
         var title = "Adults Aadhar"
         
