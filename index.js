@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 var description,dob,character,slang
 
-const token = process.env.key;
+const token = //token;
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
@@ -44,9 +44,13 @@ const PREFIX = '-';
             message.channel.send("mention someone from adults");
            return
         }
+
         const user = getUserFromMention(args[1]);
      
         var name = user.username;
+
+        
+
         switch(name){
         case 'splinter1080':
             description="Guitarist in the making"
@@ -93,7 +97,7 @@ const PREFIX = '-';
         case 'Raj Vir Singh':
           description="The only contemporary dancer of the group"
           dob="28/12/2001"
-          character=""
+          character="punjabi"
           slang='Bhai homework kar liya?'
         break;
         case 'raj_kumar_rai':
@@ -132,12 +136,22 @@ const PREFIX = '-';
           character="Lazy"
           slang='maams/bhaisaahab'
         break;
+
 default:
   return;
  
 
 
+        default:
+          message.channel.send("I see a typo!");
+          return;
+
+
+
         }
+        const user = getUserFromMention(args[1]);
+        //console.log(user);
+        var name = user.username;
         var dp = user.displayAvatarURL()
         var title = "Adults Aadhar"
         
