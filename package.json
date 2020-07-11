@@ -1,7 +1,6 @@
 {
   "name": "discord-bot",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,15 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shuxton/Discord-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shuxton/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/shuxton/Discord-Bot#readme",
+  "devDependencies": {},
+  "description": ""
 }
