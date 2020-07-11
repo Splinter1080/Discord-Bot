@@ -40,11 +40,17 @@ const PREFIX = '-';
        break;
 
        case 'profile':
-        if(typeof(args[1])=='undefined' || args[1]==null){
-            message.channel.send("mention someone");
+        if(typeof(args[1])=='undefined' || args[1]==null || typeof(getUserFromMention(args[1]))=='undefined'){
+            message.channel.send("mention someone from adults");
            return
         }
+
+        const user = getUserFromMention(args[1]);
+     
+        var name = user.username;
+
         
+
         switch(name){
         case 'splinter1080':
             description="Guitarist in the making"
@@ -131,9 +137,15 @@ const PREFIX = '-';
           slang='maams/bhaisaahab'
         break;
 
+default:
+  return;
+ 
+
+
         default:
           message.channel.send("I see a typo!");
           return;
+
 
 
         }
