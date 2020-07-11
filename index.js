@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 var description,dob,character,slang
 
-const token = '<key>';
+const token = "NzMxNDUxODk2MDkwNTkxMjUz.XwmP8A.rUXNsAv-dAnsR0qHJGz3P-dzZsM";
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
@@ -40,12 +40,12 @@ const PREFIX = '-';
        break;
 
        case 'profile':
-        if(typeof(args[1])=='undefined' || args[1]==null){
-            message.channel.send("mention someone");
+        if(typeof(args[1])=='undefined' || args[1]==null || typeof(getUserFromMention(args[1]))=='undefined'){
+            message.channel.send("mention someone from adults");
            return
         }
         const user = getUserFromMention(args[1]);
-        //console.log(user);
+     
         var name = user.username;
         switch(name){
         case 'splinter1080':
@@ -132,7 +132,9 @@ const PREFIX = '-';
           character="Lazy"
           slang='maams/bhaisaahab'
         break;
-
+default:
+  return;
+ 
 
 
         }
